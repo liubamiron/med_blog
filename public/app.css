@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    padding: unset;
+    margin: unset;
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    margin: 0;
+    font-family: Rubik-Regular,sans-serif;
+    background-color: azure;
+    text-decoration-color: white;
+}
+
+.myBanner {
+    width:100%;
+    height: 50%;
+    position:absolute;
+    margin: 0;
+    padding:0;
+}
+
+.banner_place{
+    width: 100%;
+    height: 531px;
+    /* background-image: image(src="{{ asset('medblog_1.avif') }}"); */
+    background-image: url('/Users/Liuba/myprojects/blog/public/medblog_1.avif');
+}
+.banner_place img{
+    width: 1600px;
+    height: 200px;
+    position: absolute;
+}
+/* .main-slide {
+    height: 50%;
+    position: absolute;
+    top: 261px;
+    left: 10.5%;
+    width: 96%;
+    background-repeat: no-repeat;
+  } */
+
+/* .main-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+} */
+
+.main-slide {
+    height: 100%;
+    position: absolute;
+    /* padding:0 0 0 0; */
+    /* top: 0px; */
+    /* left: 0%; */
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/* .midle {
+  flex: none;
+}
+.col {
+  flex: none;
+} */
+
+.indent_sponsors_label {
+    padding: 25px 0 0 0;
+
+}

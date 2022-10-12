@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.tag.index') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-bars"></i>
 
                         <p>
@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.post.index') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-bars"></i>
 
                         <p>

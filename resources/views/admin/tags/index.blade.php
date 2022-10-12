@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Categories</h1>
+                    <h1 class="m-0">Tags</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -41,17 +41,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($categories as $category)
+                            @foreach($tags as $tag)
 
                             <tr>
-                                <td>{{ $category->id }}</td>
-                                <td>{{ $category->title }}</td>
-                                <td class="text-center"><a href="{{route ('admin.category.show', $category->id) }}"><i
+                                <td>{{ $tag->id }}</td>
+                                <td>{{ $tag->title }}</td>
+                                <td class="text-center"><a href="{{route ('admin.tag.show', $tag->id) }}"><i
                                             class="far fa-eye"></i></a></td>
-                                <td class="text-center"><a href="{{route ('admin.category.edit', $category->id) }}" class="text-success"><i
+                                <td class="text-center"><a href="{{route ('admin.tag.edit', $tag->id) }}" class="text-success"><i
                                             class="fas fa-pencil-alt"></i></a></td>
                                 <td class="text-center">
-                                    <form action="{{ route('admin.category.delete', $category->id) }}"
+                                    <form action="{{ route('admin.tag.delete', $tag->id) }}"
                                     method="post">
                                         @csrf
                                         @method('delete')
@@ -68,7 +68,7 @@
                 </div>
                 <!--                    <button type="submit" class="btn btn-primary">Submit</button>-->
                 <div class="col-1">
-                    <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Add</a>
+                    <a href="{{ route('admin.tag.create') }}" class="btn btn-block btn-primary">Add</a>
                 </div>
             </div>
         </div>

@@ -27,15 +27,58 @@
             <div class="row">
 
                 <div class="col-12">
-                    <form action="{{ route('admin.post.store') }}" method="post" class="w-25">
+                        <form action="{{ route('admin.post.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="title" placeholder="post title">
+                        <div class="form-group w-25">
+                            <input type="text" class="form-control" name="title" placeholder="post title"
+                            value="{{old('title')}}">
                         @error('title')
                             <div class="text-danger">It's necessary to be a title</div>
                                  @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+
+
+                        <div class="form-group">
+
+                            <textarea id="summernote" name="content">
+                                {{old('content')}}
+                            </textarea>
+                            @error('content')
+                            <div class="text-danger">It's necessary to be a post</div>
+                                 @enderror
+                        </div>
+                        <div class="form-group w-50">
+                            <label for="exampleInputFile">Add preview</label>
+                            <div class="input-group">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="preview_image">
+                                <label class="custom-file-label">Choose image</label>
+                              </div>
+                              <div class="input-group-append">
+                                <span class="input-group-text">Upload</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group w-50">
+                            <label for="exampleInputFile">Add image</label>
+                            <div class="input-group">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="main_image">
+                                <label class="custom-file-label">Choose image</label>
+                              </div>
+                              <div class="input-group-append">
+                                <span class="input-group-text">Upload</span>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="form-group w-50">
+                            <label>Select the category</label>
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
                     </form>
                 </div>
 

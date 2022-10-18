@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -93,10 +94,13 @@
 <!-- daterangepicker -->
 <script src="{{ asset('plugins/moment/moment.min.js') }} "></script>
 <script src="{{ asset('plugins/daterangepicker/daterangepicker.js') }} "></script>
-<!-- Tempusdominus Bootstrap 4 -->
+<!-- Tempusdominus Bootstrap 4 -->-->
 <script src="{{ asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }} "></script>
+<!-- bs-custom -->
+<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }} "></script>
 <!-- Summernote -->
 <script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }} "></script>
+
 <!-- overlayScrollbars -->
 <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }} "></script>
 <!-- AdminLTE App -->
@@ -105,5 +109,30 @@
 <!--<script src="{{ asset('dist/js/demo.js') }}"></script>-->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!--<script src="dist/js/pages/dashboard.js"></script>-->
+<script>
+$(document).ready(function() {
+    $('#summernote').summernote({
+        toolbar: [
+          ['font', ['superscript', 'subscript', 'strikethrough']],
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']]
+        ]
+      });
+  });
+$(function () {
+    bsCustomFileInput.init();
+  });
+</script>
+<style>
+    .custom-file-input:lang(en)~.custom-file-label::after {
+        content: "...";
+    }
+</style>
 </body>
 </html>

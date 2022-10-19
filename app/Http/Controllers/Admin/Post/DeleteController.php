@@ -11,8 +11,8 @@ class DeleteController extends Controller
     public function __invoke(Post $post)
     {
 //        dd(111);
-//        $post->delete();
-        return redirect()->route('admin.posts.index');
+        $post->delete();
+        return redirect()->route('admin.post.index');
 //        return view('admin.posts.index', compact('post'));
     }
 }

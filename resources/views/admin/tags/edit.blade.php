@@ -27,12 +27,12 @@
             <div class="row">
 
                 <div class="col-12">
-                    <form action="{{route('admin.tag.update', $tag ?? ''->id) }}" method="post" class="w-25">
+                    <form action="{{route('admin.tag.update', $tag->id) }}" method="post" class="w-25">
                         @csrf
                         @method('patch')
                         <div class="form-group">
                             <input type="text" class="form-control" name="title" placeholder="tag title"
-                            value="{{$tag ?? ''->title}}">
+                            value="{{$tag->title}}">
                         @error('title')
                             <div class="text-danger">It's necessary to be a title</div>
                                  @enderror

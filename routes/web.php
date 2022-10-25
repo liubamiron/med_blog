@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::delete('/{tag}', 'DeleteController')->name('admin.tag.delete');
 
     });
+
+    Route::get('/api/posts',  [PostController::class, 'index']);
+
+    Route::get('/api/posts/{id}',  [PostController::class, 'show']);
 
 
 

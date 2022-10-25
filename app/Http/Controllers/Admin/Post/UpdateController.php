@@ -16,7 +16,7 @@ class UpdateController extends Controller
         $data = $request->validated();
 
         $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
-        $data['main_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
+        $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
         $post->update($data);
         return view('admin.posts.show', compact('post'));
     }

@@ -11,7 +11,7 @@ use App\Models\Tag;
 
 class EditController extends Controller
 {
-    public function __invoke(Post $post, Tag $tag)
+    public function __invoke(Post $post)
     {
      // dd(111);
       $categories = Category::all();

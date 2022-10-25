@@ -50,7 +50,7 @@
                             <label for="exampleInputFile">Add preview</label>
                             <div class="input-group">
                               <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="preview_image">
+                                <input type="file" class="custom-file-input" name="preview_image" id="preview_image">
                                 <label class="custom-file-label">Choose image</label>
                               </div>
                               <div class="input-group-append">

@@ -50,7 +50,7 @@
                             <div class="form-group w-50">
                                 <label for="exampleInputFile">Add preview</label>
                                 <div class="w-25 mb-3">
-                                    <img src="{{ url('storage/'.$post->preview_image) }}" alt="preview_image" class="w-50">
+                                    <img src="{{ url('storage/' .$post->preview_image) }}" alt="preview_image" class="w-50">
                                 </div>
                                 <div class="input-group">
                                     <div class="custom-file">
@@ -68,7 +68,7 @@
                             <div class="form-group w-50 mb-3">
                                 <label for="exampleInputFile">Add image</label>
                                 <div class="w-30">
-                                    <img src="{{ url('storage/'.$post->main_image) }}" alt="main_image" class="w-50">
+                                    <img src="{{ url('storage/' . $post->main_image) }}" alt="main_image" class="w-50">
                                 </div>
                                 <div class="input-group">
                                     <div class="custom-file">

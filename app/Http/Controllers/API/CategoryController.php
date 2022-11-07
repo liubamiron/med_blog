@@ -1,30 +1,24 @@
 <?php
 
 namespace App\Http\Controllers\API;
-header("Access-Control-Allow-Origin: *");
+
 use App\Http\Controllers\Controller;
-use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
-
-
-class PostController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-        public function index()
+    public function index()
     {
         {
-            $posts = Post::all();
-            return response()->json($posts);
+            $categories = Category::all();
+            return response()->json($categories);
         }
-
     }
 
 
@@ -32,20 +26,18 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required|string',
-            'url' => 'required|string',
-            'content' => 'required|string',
+
 
         ]);
 
-        $newPost = new Post([
+        $newCategory = new Category([
             'title' => 'required|string',
-            'url' => 'required|string',
-            'content' => 'required|string',
+
         ]);
 
-        $newPost->save();
+        $newCategory->save();
 
-        return response()->json($newPost);
+        return response()->json($newCategory);
     }
 
     /**
@@ -56,10 +48,15 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
-        return response()->json($post);
+        $category = Category::findOrFail($id);
+        return response()->json($category);
     }
 
+    public function showtitle($title)
+    {
+        $category = Category::findOrFail($title);
+        return response()->json($category);
+    }
 
 
     /**
@@ -72,19 +69,19 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         {
-            $post = Post::findOrFail($id);
+            $category = Category::findOrFail($id);
 
             $request->validate([
-                'name' => 'required|max:255',
-                'text' => 'required'
+                'title' => 'required|max:255',
+
             ]);
 
-            $post->name = $request->get('name');
-            $post->text = $request->get('text');
+            $category->title = $request->get('title');
 
-            $post->save();
 
-            return response()->json($post);
+            $category->save();
+
+            return response()->json($category);
         }
     }
 
@@ -96,9 +93,9 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::findOrFail($id);
-        $post->delete();
+        $category = Post::findOrFail($id);
+        $category->delete();
 
-        return response()->json($post::all());
+        return response()->json($category::all());
     }
 }

@@ -10,7 +10,7 @@ class ShowController extends Controller
 {
     public function __invoke(Post $post)
     {
-//        dd(111);
+       //dd(111);
 
         return view('admin.posts.show', compact('post'));
     }

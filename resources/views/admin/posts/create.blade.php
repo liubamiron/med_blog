@@ -35,8 +35,10 @@
                         @error('title')
                             <div class="text-danger">It's necessary to be a title</div>
                                  @enderror
+                            <br/>
+                            <input type="text" class="form-control" name="url" placeholder="post url"
+                                   value="{{old('url')}}">
                         </div>
-
 
                         <div class="form-group w-50">
                             <textarea id="summernote" name="content">
@@ -50,16 +52,14 @@
                             <label for="exampleInputFile">Add preview</label>
                             <div class="input-group">
                               <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="preview_image" id="preview_image">
+                                <input type="file" class="custom-file-input" name="preview_image">
                                 <label class="custom-file-label">Choose image</label>
                               </div>
                               <div class="input-group-append">
                                 <span class="input-group-text">Upload</span>
                               </div>
                             </div>
-                            @error('preview_image')
-                            <div class="text-danger">It's necessary to be an image</div>
-                            @enderror
+
                           </div>
                           <div class="form-group w-50">
                             <label for="exampleInputFile">Add image</label>
@@ -72,9 +72,7 @@
                                 <span class="input-group-text">Upload</span>
                               </div>
                             </div>
-                              @error('main_image')
-                              <div class="text-danger">It's necessary to be an image</div>
-                              @enderror
+
                           </div>
                         <div class="form-group w-50">
                             <label>Select the category</label>

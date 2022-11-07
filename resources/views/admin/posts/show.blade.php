@@ -53,12 +53,22 @@
                                     <td>Title</td>
                                     <td>{{ $post->title }}</td>
                                 </tr>
+                                <tr>
+                                    <td>Url</td>
+                                    <td>{{ $post->url }}</td>
+                                </tr>
+
                                 </tbody>
                             </table>
-                        </div>
-                        </div>
-<!--                    <button type="submit" class="btn btn-primary">Submit</button>-->
 
+
+
+                        </div>
+                        </div>
+                    <div>
+                        <h5>Content</h5>
+                    </div>
+                    {!! $post->content !!}
                     </div>
                 </div>
 

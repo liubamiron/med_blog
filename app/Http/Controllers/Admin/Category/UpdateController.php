@@ -12,7 +12,7 @@ class UpdateController extends Controller
 {
     public function __invoke(UpdateRequest $request, Category $category)
     {
-//        dd(111);
+
         $data = $request->validated();
         $category->update($data);
         return view('admin.categories.show', compact('category'));

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PostController;
+use App\Http\Controllers\API\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,9 +61,17 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
     Route::get('/api/posts/{id}',  [PostController::class, 'show']);
 
+    Route::get('/api/categories',  [CategoryController::class, 'index']);
+
+    Route::get('/api/categories/{id}',  [CategoryController::class, 'show']);
+
+    Route::get('/api/categories/{title}',  [CategoryController::class, 'showtitle']);
+
 
 
 });
+
+
 
 Auth::routes();
 

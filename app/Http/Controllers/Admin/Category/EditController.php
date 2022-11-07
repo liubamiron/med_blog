@@ -11,7 +11,7 @@ class EditController extends Controller
 {
     public function __invoke(Category $category)
     {
-//        dd(111);
+
         return view('admin.categories.edit', compact('category'));
     }
 }

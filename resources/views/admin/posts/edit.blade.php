@@ -32,15 +32,17 @@
                         @method('patch')
                         <div class="form-group w-25">
                             <input type="text" class="form-control" name="title" placeholder="post title"
-                            value="{{ $post->title }}"
-                            >
+                            value="{{ $post->title }}"/>
                             @error('title')
                             <div class="text-danger">It's necessary to be a title</div>
                             @enderror
+                            <br>
+                            <input type="text" class="form-control" name="url" placeholder="post url"
+                                   value="{{ $post->url }}"/>
                         </div>
 
                             <div class="form-group w-50">
-                            <textarea id="summernote" name="content">
+                            <textarea id="summernote" name="content" type="text">
                                 {{$post->content}}
                             </textarea>
                                 @error('content')
@@ -50,7 +52,7 @@
                             <div class="form-group w-50">
                                 <label for="exampleInputFile">Add preview</label>
                                 <div class="w-25 mb-3">
-                                    <img src="{{ url('storage/' .$post->preview_image) }}" alt="preview_image" class="w-50">
+                                    <img src="{{ asset('storage/' .$post->preview_image) }}" alt="preview_image" class="w-50">
                                 </div>
                                 <div class="input-group">
                                     <div class="custom-file">
@@ -61,9 +63,7 @@
                                         <span class="input-group-text">Upload</span>
                                     </div>
                                 </div>
-                                @error('preview_image')
-                                <div class="text-danger">It's necessary to be an image</div>
-                                @enderror
+
                             </div>
                             <div class="form-group w-50 mb-3">
                                 <label for="exampleInputFile">Add image</label>
@@ -79,9 +79,7 @@
                                         <span class="input-group-text">Upload</span>
                                     </div>
                                 </div>
-                                @error('main_image')
-                                <div class="text-danger">It's necessary to be an image</div>
-                                @enderror
+
                             </div>
                             <div class="form-group w-50">
                                 <label>Select the category</label>

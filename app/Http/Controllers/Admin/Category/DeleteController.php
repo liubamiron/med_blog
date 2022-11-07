@@ -11,7 +11,7 @@ class DeleteController extends Controller
 {
     public function __invoke(Category $category)
     {
-//        dd(111);
+
         $category->delete();
         return redirect()->route('admin.category.index');
 //        return view('admin.categories.index', compact('category'));

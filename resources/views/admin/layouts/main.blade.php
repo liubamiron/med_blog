@@ -44,19 +44,19 @@
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
-<!--            <li class="nav-item d-none d-sm-inline-block">-->
-<!--                <a href="index3.html" class="nav-link">Home</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item d-none d-sm-inline-block">-->
-<!--                <a href="#" class="nav-link">Contact</a>-->
-<!--            </li>-->
+            <!--            <li class="nav-item d-none d-sm-inline-block">-->
+            <!--                <a href="index3.html" class="nav-link">Home</a>-->
+            <!--            </li>-->
+            <!--            <li class="nav-item d-none d-sm-inline-block">-->
+            <!--                <a href="#" class="nav-link">Contact</a>-->
+            <!--            </li>-->
         </ul>
     </nav>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
     @include('admin.includes.sidebar')
-@yield('content')
+    @yield('content')
 
     <footer class="main-footer">
         <strong>Copyright &copy; 2022 </strong>
@@ -114,25 +114,25 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!--<script src="dist/js/pages/dashboard.js"></script>-->
 <script>
-$(document).ready(function() {
-    $('#summernote').summernote({
-        toolbar: [
-          ['font', ['superscript', 'subscript', 'strikethrough']],
-          ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['fontsize', ['fontsize']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['table', ['table']],
-          ['insert', ['link']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['height', ['height']]
-        ]
-      });
-  });
-$(function () {
-    bsCustomFileInput.init();
-  });
-$('.select2').select2()
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            toolbar: [
+                ['font', ['superscript', 'subscript', 'strikethrough']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
+        });
+    });
+    $(function () {
+        bsCustomFileInput.init();
+    });
+    $('.select2').select2()
 </script>
 <style>
     .custom-file-input:lang(en)~.custom-file-label::after {

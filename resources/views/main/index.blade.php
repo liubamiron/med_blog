@@ -70,10 +70,10 @@
                     Tempore doloribus provident aut aliquam nihil quam, ndus ipsam, maxime incidunt culpa natus ipsa voluptates blanditiis odio.
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
+                        {{-- <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
+                        </div> --}}
                         <small class="text-muted">9 mins</small>
                     </div>
                 </div>
